@@ -1,0 +1,8 @@
+outputs/*
+finn
+test
+__pycache__
+src
+./*.onnx
+*.log
+deploy/driver/nw_metrics.txt
