@@ -12,7 +12,7 @@ unet_build_dataflow_steps = [
     "step_generate_estimate_reports",
     "step_hls_codegen",
     "step_hls_ipgen",
-    step_unet_set_fifo_depths,
+    "step_set_fifo_depths",
     "step_synthesize_bitfile",
 ]
 
@@ -25,12 +25,12 @@ def main():
     synth_clk_period_ns = 5,
     board               = "U250",
     shell_flow_type     = build_cfg.ShellFlowType.VITIS_ALVEO,
-    vitis_platform      = "xilinx_u250_gen3x16_xdma_2_1_202010_1",
+    vitis_platform      = "xilinx_u250_gen3x16_xdma_4_1_202210_1",
     steps               = unet_build_dataflow_steps,
     folding_config_file = folding_config_file,
     auto_fifo_depths = False,
     large_fifo_mem_style = build_cfg.LargeFIFOMemStyle.URAM,
-
+    split_large_fifos = True,
     generate_outputs=[
         build_cfg.DataflowOutputType.ESTIMATE_REPORTS,
         build_cfg.DataflowOutputType.BITFILE,
