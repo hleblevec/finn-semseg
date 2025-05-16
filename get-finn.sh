@@ -56,6 +56,3 @@ if [ $CURRENT_COMMIT == $REPO_COMMIT ]; then
 else
   echo "Could not check out $REPO_DIR. Check your internet connection and try again."
 fi
-
-sed -i '104i\RUN pip install numpy==1.22.0' finn/docker/Dockerfile.finn
-sed -i '66i\RUN pip install attrs==22.2.0' finn/docker/finn_entrypoint.sh

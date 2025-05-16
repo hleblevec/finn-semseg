@@ -20,7 +20,7 @@ To re-generate binaries, do:
 get-finn.sh
 cd finn/
 #launch the build
-./run-docker.sh build_custom ../scripts
+./run-docker.sh build_custom ../build
 ```
 
 Newly generated bitfile should be in `/outputs/bitfile/`.

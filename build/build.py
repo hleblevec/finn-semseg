@@ -16,12 +16,12 @@ unet_build_dataflow_steps = [
     "step_synthesize_bitfile",
 ]
 
-model_file = "../models/resnet18unet_256_256_w4_a4.onnx"
+model_file = "models/resnet18unet_256_256_w4_a4.onnx"
 folding_config_file = "resnet18_unet_folding_config.json"
 
 def main():
     cfg = build.DataflowBuildConfig(
-    output_dir          = "../outputs",
+    output_dir          = "outputs",
     synth_clk_period_ns = 5,
     board               = "U250",
     shell_flow_type     = build_cfg.ShellFlowType.VITIS_ALVEO,
